@@ -1,0 +1,4 @@
+tensorflow==2.6.2
+tensorflow-probability==0.14.1
+numpy==1.19.5
+
