@@ -630,7 +630,7 @@ flow.actnorm_data_initialization()
 _ = flow(dummy_input)
 
 checkpoint = tf.train.Checkpoint(optimizer=optimizer,net = flow )
-checkpoint_dir = './checkpoints_3dim_new_new'
+checkpoint_dir = './checkpoints'
 latest_checkpoint = tf.train.latest_checkpoint(checkpoint_dir)
 
 if latest_checkpoint:
@@ -708,7 +708,7 @@ for t in range(100001):
     if t % 500 == 0:
         print(f"Iteration {t}: Loss = {loss.numpy():.3f}, Penalty = {penalty_loss.numpy():.3f}, Grad Loss = {grad_penalty_loss.numpy():.3f}, Repulsion_loss = {repulsion_loss.numpy():.3f}")
     if t and t%5000 == 0:
-        manager = tf.train.CheckpointManager(checkpoint, directory='./checkpoints_3dim_new_new', max_to_keep=5)
+        manager = tf.train.CheckpointManager(checkpoint, directory='./checkpoints', max_to_keep=5)
         manager.save()
     if t%5000 == 0:
         new_lr = optimizer.learning_rate.numpy() * 0.9
