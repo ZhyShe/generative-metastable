@@ -26,12 +26,9 @@ generative-metastable/
 │   └── checkpoints/
 │
 ├── md_model/                     # Alanine dipeptide (real MD)
-│   ├── train_md_model.py               
+│   ├── train_md_model.py
+│   ├── ala2_md.ipynb
 │   └── checkpoints/           
-│
-├── notebooks/                   # Jupyter notebooks (optional)
-│   ├── md_analysis.ipynb
-│   └── muller_visualization.ipynb
 │
 ├── requirements.txt             # Minimal: tensorflow, tfp, numpy
 ├── runtime.txt                  # Binder/Colab Python version
