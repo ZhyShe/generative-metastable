@@ -697,7 +697,7 @@ else:
 
 
 @tf.function(experimental_relax_shapes=True)
-def train_step(x_data, lambda_margin, lambda_grad):
+def train_step(x_data):
     """
     Performs one step of training:
     - Computes the loss
@@ -744,7 +744,7 @@ for t in range(1,200001):
     samples = np.load('./data/Set_1/set_'+str(int(t%4900))+'.npy')
     samples = tf.convert_to_tensor(samples, dtype=tf.float32)
     # Perform one training step
-    loss, penalty_loss, grad_penalty,repulsion_loss,bounder_panelty = train_step(samples,lambda_margin = penalty, lambda_grad = penalty_1)
+    loss, penalty_loss, grad_penalty,repulsion_loss,bounder_panelty = train_step(samples)
 
     # Print progress
     if t % 500 == 0 or t == 1:
