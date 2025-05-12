@@ -22,6 +22,7 @@ We demonstrate the method on **alanine dipeptide in aqueous solution**, where th
 generative-metastable/
 ├── muller_model/                # Müller–Brown potential (toy model)
 │   ├── train_model.py
+│   ├── Muller.ipynb             # Loading model and plotting some results
 │   └── checkpoints/
 │
 ├── md_model/                     # Alanine dipeptide (real MD)
