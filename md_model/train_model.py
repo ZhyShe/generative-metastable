@@ -744,7 +744,7 @@ for t in range(1,200001):
     samples = np.load('./data/Set_1/set_'+str(int(t%4900))+'.npy')
     samples = tf.convert_to_tensor(samples, dtype=tf.float32)
     # Perform one training step
-     loss, penalty_loss, grad_penalty,repulsion_loss,bounder_panelty = train_step(samples,lambda_margin = penalty, lambda_grad = penalty_1)
+    loss, penalty_loss, grad_penalty,repulsion_loss,bounder_panelty = train_step(samples,lambda_margin = penalty, lambda_grad = penalty_1)
 
     # Print progress
     if t % 500 == 0 or t == 1:
