@@ -19,7 +19,7 @@ We demonstrate the method on **alanine dipeptide in aqueous solution**, where th
 # Project Structure: Generative CV Learning for MD + Müller–Brown
 
 ```
-gen-cv-md/
+generative-metastable/
 ├── muller_model/                # Müller–Brown potential (toy model)
 │   ├── train_model.py
 │   └── checkpoints/
