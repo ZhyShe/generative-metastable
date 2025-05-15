@@ -32,6 +32,5 @@ generative-metastable/
 │
 ├── requirements.txt             # Minimal: tensorflow, tfp, numpy
 ├── runtime.txt                  # Binder/Colab Python version
-├── .gitignore                   # Ignore checkpoints, data, etc.
 └── README.md
 ```
